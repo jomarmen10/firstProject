@@ -14,9 +14,6 @@ let enemyPic = new Image();
 enemyPic.src = "img/enemies.png"
 
 
-// background.onload = function(){
-//     ctx.drawImage(background,0,144,player.w,player.h,player.x, player.y, player.w, player.h);
-// }
 
 let gameLive = true;
 
@@ -34,8 +31,16 @@ const world = {
   ground: 240,
   x: 0,
   y: 280,
-  w: 500,
+  w: 300,
   h: 5,
+}
+
+const woldSpace = {
+  ground: 240,
+  x: 400,
+  y: 280,
+  w: 200,
+  h: 5
 }
 
 const highGround = {
@@ -103,6 +108,9 @@ const drawImage = () => {
     ctx.fillRect(world.x, world.y, world.w, world.h,)
 
     ctx.fillStyle = 'brown';
+    ctx.fillRect(woldSpace.x, woldSpace.y, canvas.width, woldSpace.h,)
+
+    ctx.fillStyle = 'brown';
     ctx.fillRect(200, 150, 250, 10)
 
 
@@ -112,17 +120,20 @@ const drawImage = () => {
 
 const update = () => {
 
-  if(collision(player, enemy)){
-    gameLive = false;
-  }
+  // if(collision(player, enemy)){
+  //   gameLive = false;
+  // }
 
-  if(collision(player, highGround)){
-    player.y = highGround.y - 60;
-    player.yVelo *= 0.7;
-    if(player.yVelo > 0){
-      console.log('hesdfsd')
-      player.jumping = false
-    }
+  // if(collision(player, highGround)){
+  //   player.y = highGround.y - 60;
+  //   player.yVelo *= 0.7;
+  //   if(player.yVelo > 0){
+  //     player.jumping = false
+  //   }
+  // }
+
+  if(collision(player, woldSpace)){
+    player.y = woldSpace.y - 60;
   }
 
   if(collision(player, world)){
@@ -134,20 +145,19 @@ const update = () => {
   }
 
 
-  enemy.x += enemy.speed
+  // enemy.x += enemy.speed
   if( enemy.x <= 200){
-    console.log('hello')
     enemy.x = 200;
-    enemy.speed *= -1
+    enemy.speed *= -1;
   } else if (enemy.x >= 450){
     enemy.x = 450;
-    enemy.speed *= -1
+    enemy.speed *= -1;
   }
 }
 
 const loop = () => {
 
-  player.yVelo += 1.2
+  player.yVelo += 1.2;
   player.x += player.xVelo;
   player.y += player.yVelo;
   player.xVelo *= 0.9;
@@ -159,17 +169,17 @@ const loop = () => {
     player.x = -40;
   }
 
-  if(player.y > canvas.height){
+  if(player.y > world.y){
     gameLive = false;
   }
-  update()
-  keyControl()
-  drawImage()
-  collision(player, enemy)
-  collision(player, highGround)
+  update();
+  keyControl();
+  drawImage();
+  collision(player, enemy);
+  collision(player, highGround);
 
   if(gameLive){
-    requestAnimationFrame(loop)
+    requestAnimationFrame(loop);
   }
 }
 const collision = (rect1, rect2) =>{

@@ -4,5 +4,9 @@ canvas {
   border: 1px;
   border-color: black;
   border-style: solid;
+}
 
+
+h1 {
+  text-align: center;
 }
