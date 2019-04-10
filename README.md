@@ -4,4 +4,5 @@
 <p> The objective of the game is to safely get across the map without touching the enemies.</p>
 <p> you can control Mario using the LEFT and RIGHT arrow key and SPACEBAR to jump.</p>
 
-<p> Link. to the game: </p> <a>https://jomarmen10.github.io/firstProject/</a>
+
+[PLAY](https://jomarmen10.github.io/firstProject)GAME
