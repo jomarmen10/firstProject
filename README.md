@@ -5,4 +5,7 @@
 <p> you can control Mario using the LEFT and RIGHT arrow key and SPACEBAR to jump.</p>
 
 
-[PLAY](https://jomarmen10.github.io/firstProject)GAME
+[PLAY GAME](https://jomarmen10.github.io/firstProject)
+
+
+![Sample Image](https://imgur.com/crvn9oI)
