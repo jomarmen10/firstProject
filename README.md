@@ -7,5 +7,5 @@
 
 [PLAY GAME](https://jomarmen10.github.io/firstProject)
 
+![Screen schoot sample](https://raw.githubusercontent.com/jomarmen10/jomarmen10.github.io/master/img/SuperMario.png)
 
-![Sample Image](https://imgur.com/crvn9oI)
