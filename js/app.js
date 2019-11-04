@@ -256,15 +256,6 @@ const world3 = () => {
 
   ctx.drawImage(enemyPic,0,0,29,29,enemy3.x,enemy3.y,enemy3.w,enemy3.h);
 
-  ctx.fillStyle = 'blue';
-  ctx.fillRect(high1.x, high1.y, high1.w, high1.h,)
-  ctx.fillStyle = 'blue';
-  ctx.fillRect(high2.x, high2.y, high2.w, high2.h,)
-  ctx.fillStyle = 'blue';
-  ctx.fillRect(high3.x, high3.y, high3.w, high3.h,)
-  ctx.fillStyle = 'blue';
-  ctx.fillRect(high4.x, high4.y, high4.w, high4.h,)
-
   if(collision(player, enemy3)){
     gameLive = false;
     $('canvas').remove();
