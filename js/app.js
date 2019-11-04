@@ -256,6 +256,8 @@ const world3 = () => {
 
   ctx.drawImage(enemyPic,0,0,29,29,enemy3.x,enemy3.y,enemy3.w,enemy3.h);
 
+
+
   if(collision(player, enemy3)){
     gameLive = false;
     $('canvas').remove();
