@@ -1,5 +1,6 @@
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
+let title = document.querySelector('.title')
 
 canvas.width = 900;
 canvas.height = 300;
@@ -148,8 +149,11 @@ const world1 = () => {
   if(collision(player, enemy1)){
     gameLive = false;
     $('canvas').remove();
-    $('body').append($("<h1>Game Over</h1>"));
+    $('.title').remove();
+    $('body').append($(`<img src="https://fontmeme.com/permalink/191105/e16e31b926376852e87057fef07cf2c8.png" alt="super-mario-bros-font" border="0">`));
     $('body').css('background', 'red');
+
+
   }
 
   if(collision(player, highGround)){
@@ -323,7 +327,8 @@ const world5 = () => {
   if(collision(player, goal)){
     gameLive = false;
     $('canvas').remove()
-    $('body').append($("<h1>good game</h1>"))
+    $('.title').remove()
+    $('body').append($(`<img src="https://fontmeme.com/permalink/191105/8c91fd90b66c09c9856bec8864622140.png" alt="super-mario-bros-font" border="0">`))
     $('body').css('background', 'green')
 
   }
